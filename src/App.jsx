@@ -87,6 +87,7 @@ function App() {
             todoDetails={todoDetails}
             openDialog={openDialog}
             setOpenDialog={setOpenDialog}
+            setTodoDetails={setTodoDetails}
           />
         )}
       </div>

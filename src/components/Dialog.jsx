@@ -6,7 +6,12 @@ import {
 } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 
-export default function DialogBox({ openDialog, todoDetails, setOpenDialog }) {
+export default function DialogBox({
+  openDialog,
+  todoDetails,
+  setOpenDialog,
+  setTodoDetails,
+}) {
   console.log(todoDetails);
 
   return (
@@ -69,7 +74,10 @@ export default function DialogBox({ openDialog, todoDetails, setOpenDialog }) {
               <button
                 type="button"
                 data-autofocus
-                onClick={() => setOpenDialog(false)}
+                onClick={() => {
+                  setOpenDialog(false);
+                  setTodoDetails(null);
+                }}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto"
               >
                 Cancel
