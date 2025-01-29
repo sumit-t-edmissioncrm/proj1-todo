@@ -68,8 +68,8 @@ function App() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <h1 className="font-bold text-6xl m-4">My Todo List</h1>
-        <div className="grid grid-cols-4 gap-4">
+        <h1 className="font-bold text-3xl sm:text-6xl m-4">My Todo List</h1>
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2">
           {todos && todos?.length > 0
             ? todos.map((todo) => {
                 return (
