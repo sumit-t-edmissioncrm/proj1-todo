@@ -1,19 +1,25 @@
 import React from "react";
 
-const Todos = ({ todo, setOpenDialog, openDialog,fetchDetailsOfCurrentTodo }) => {
+const Todos = ({
+  todo,
+  setOpenDialog,
+  openDialog,
+  fetchDetailsOfCurrentTodo,
+}) => {
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
+    <div className="relative max-w-sm p-6 pb-16 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div className="">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {todo.todo}
         </h5>
-      </a>
+      </div>
 
       <button
         onClick={() => {
-            fetchDetailsOfCurrentTodo(todo.id)
-            setOpenDialog(!openDialog)}}
-        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center  bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-white"
+          fetchDetailsOfCurrentTodo(todo.id);
+          setOpenDialog(!openDialog);
+        }}
+        className="absolute bottom-4 right-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center  bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-white"
       >
         Read more
         <svg
